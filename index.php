@@ -6,15 +6,15 @@ Creare un array di array. Ogni array figlio avrà come chiave una data in questo
 $movies = [
   "14/09/1963" => [
     [
-    "title" => "eight and half",
-    "author" => "federico fellini",
-    "text" => "text post 1"
-  ],
-  [
-    "title" => "i vitelloni",
-    "author" => "federico fellini",
-    "text" => "text post 2"
-  ]
+      "title" => "eight and half",
+      "author" => "federico fellini",
+      "text" => "text post 1"
+    ],
+    [
+      "title" => "i vitelloni",
+      "author" => "federico fellini",
+      "text" => "text post 2"
+    ]
   ],
   "14/09/1931" => [
     [
@@ -25,7 +25,7 @@ $movies = [
   ]
 ];
 
-var_dump($movies);
+//var_dump($movies);
 
 ?>
 
@@ -41,9 +41,29 @@ var_dump($movies);
 <body>
   <?php
 
-    for($i = 0; $i < count($movies); $i++){
-      echo $movies[$i];
-    };
+    /*for($i = 0; $i < count($movies); $i++){
+        echo $movies["14/09/1963"];
+        print_r($movies);
+    };*/
+
+    /* echo '<pre>'; print_r($movies["14/09/1963"]); echo '</pre>';
+    echo '<pre>'; print_r($movies["14/09/1931"]); echo '</pre>'; */
+
+    foreach ($movies["14/09/1963"] as $result) {
+      echo $result['title'], '<br>';
+      echo $result['author'], '<br>';
+      echo $result['text'], '<br>';
+    }
+
+    echo '<hr>';
+
+    foreach ($movies["14/09/1931"] as $result) {
+      echo $result['title'], '<br>';
+      echo $result['author'], '<br>';
+      echo $result['text'], '<br>';
+    }
+
+
     
 
   
