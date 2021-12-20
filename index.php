@@ -25,7 +25,7 @@ $movies = [
   ]
 ];
 
-//var_dump($movies);
+var_dump($movies);
 
 ?>
 
@@ -43,12 +43,13 @@ $movies = [
 
     /*for($i = 0; $i < count($movies); $i++){
         echo $movies["14/09/1963"];
+        
         print_r($movies);
     };*/
 
     /* echo '<pre>'; print_r($movies["14/09/1963"]); echo '</pre>';
     echo '<pre>'; print_r($movies["14/09/1931"]); echo '</pre>'; */
-
+   
     foreach ($movies["14/09/1963"] as $result) {
       echo $result['title'], '<br>';
       echo $result['author'], '<br>';
@@ -56,12 +57,18 @@ $movies = [
     }
 
     echo '<hr>';
-
+    
+    foreach ($movies as $key => $value) {
+      echo "$key => $value" . '<br>';
+    }
+    /*
     foreach ($movies["14/09/1931"] as $result) {
       echo $result['title'], '<br>';
       echo $result['author'], '<br>';
       echo $result['text'], '<br>';
-    }
+    }*/
+
+    
 
 
     
