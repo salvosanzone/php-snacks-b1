@@ -40,37 +40,17 @@ var_dump($movies);
 </head>
 <body>
   <?php
-
-    /*for($i = 0; $i < count($movies); $i++){
-        echo $movies["14/09/1963"];
-        
-        print_r($movies);
-    };*/
-
-    /* echo '<pre>'; print_r($movies["14/09/1963"]); echo '</pre>';
-    echo '<pre>'; print_r($movies["14/09/1931"]); echo '</pre>'; */
-   
-    foreach ($movies["14/09/1963"] as $result) {
-      echo $result['title'], '<br>';
-      echo $result['author'], '<br>';
-      echo $result['text'], '<br>';
-    }
-
-    echo '<hr>';
     
     foreach ($movies as $key => $value) {
       echo "$key => $value" . '<br>';
+      foreach ($value as $val){
+        echo 'film:' . $val['title'] . '<br>';
+        echo 'autore:' . $val['author'] . '<br>';
+        echo 'testo:' . $val['text'] . '<br>';
+      }
     }
-    /*
-    foreach ($movies["14/09/1931"] as $result) {
-      echo $result['title'], '<br>';
-      echo $result['author'], '<br>';
-      echo $result['text'], '<br>';
-    }*/
 
     
-
-
     
 
   
